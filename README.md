@@ -5,10 +5,8 @@ This is an Automatic License Plate Recognition (ALPR) module for [CodeProject.AI
 ## To develop and debug this code
 
 1. Clone the main [server repo](https://github.com/codeproject/CodeProject.AI-Server) into a directory such as `CodeProject/CodeProject.AI-Server`
-<br>
 
 2. Clone this ALPR repo into a separate folder `CodeProject/CodeProject.AI-Modules`
-<br>
 
     You should now have
 
@@ -27,7 +25,7 @@ This is an Automatic License Plate Recognition (ALPR) module for [CodeProject.AI
     Run the server dev setup scripts by opening a terminal in `CodeProject.AI-Server/src/` then, for Windows, run `setup.bat`, or for Linux/macOS run `bash setup.sh`.<br>
     This will setup the server, and will also setup this module as long as this module sits under a folder named `CodeProject.AI-Modules`, with `CodeProject.AI-Modules` being at the same folder level as `CodeProject.AI-Server`.
 
-    <br>**If you have already setup the server**
+    **If you have already setup the server**
     You can run the setup for just this module running the setup script from a terminal opened in this folder
    ```BAT
    REM For Windows
@@ -46,9 +44,9 @@ Assuming the folder structure outlined above, run
 
    ```BAT
    REM For Windows
-   ..\..\CodeProject.AI-Server\src\setup.bat
+   ..\..\CodeProject.AI-Server\src\create_packages.bat
    ```
    ```bash
    # For Linux/macOS
-   bash ../../CodeProject.AI-Server/src/setup.sh
+   bash ../../CodeProject.AI-Server/src/create_pacakges.sh
    ```
