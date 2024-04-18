@@ -1,0 +1,10 @@
+{
+  "Modules": {
+
+    "ALPR": {
+      "GpuOptions" : {
+        "InstallGPU": false   // PaddlePaddle-GPU isn't supported on macOS
+      }
+    }
+  }
+}

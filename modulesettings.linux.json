@@ -1,0 +1,10 @@
+{
+  "Modules": {
+
+    "ALPR": {
+      "GpuOptions" : {
+        "InstallGPU": false
+      }
+    }
+  }
+}
