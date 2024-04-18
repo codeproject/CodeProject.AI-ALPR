@@ -48,5 +48,5 @@ Assuming the folder structure outlined above, run
    ```
    ```bash
    # For Linux/macOS
-   bash ../../CodeProject.AI-Server/src/create_pacakges.sh
+   bash ../../CodeProject.AI-Server/src/create_packages.sh
    ```
