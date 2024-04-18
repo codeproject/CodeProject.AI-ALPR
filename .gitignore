@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# debug debris
+plate.png
+
+# Generated package files
+*-[0-9]*.[0-9]*.[0-9]*.zip
+
+# Models
+paddleocr
+
+# Python install / Virtual environment
+bin/

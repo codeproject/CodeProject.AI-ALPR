@@ -1,12 +1,23 @@
 # Import our general libraries
+import os
 import sys
 import time
 
-# Import the CodeProject.AI SDK. This will add to the PATH  for future imports
-sys.path.append("../../SDK/Python")
+#-------------------------------------------------------------------------------
+# TODO: Replace this with a PyPi module
+
+# Import the CodeProject.AI SDK. This will add to the PATH for future imports
+if os.path.exists("../../SDK/Python"):
+    sys.path.append("../../SDK/Python")
+if os.path.exists("../../CodeProject.AI-Server/SDK/Python"):
+    sys.path.append("../../CodeProject.AI-Server/SDK/Python")
+if os.path.exists("../../CodeProject.AI-Server/src/SDK/Python"):
+    sys.path.append("../../CodeProject.AI-Server/src/SDK/Python")
+
 from request_data import RequestData
 from module_runner import ModuleRunner
 from common import JSON
+#-------------------------------------------------------------------------------
 
 from options import Options
 

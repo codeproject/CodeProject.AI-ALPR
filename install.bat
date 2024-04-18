@@ -20,6 +20,20 @@
 :: Download the ALPR models and store in /paddleocr
 call "%sdkScriptsDirPath%\utils.bat" GetFromServer "models/" "ocr-en-pp_ocrv4-paddle.zip" "paddleocr" "Downloading ALPR models..."
 
+
+REM Intel i7 920 CPUs have trouble with paddlepaddle
+for /f "tokens=2 delims==" %%I in ('wmic cpu get name /value') do (
+    set "cpu_name=%%I"
+    goto :break_loop
+)
+:break_loop
+
+REM Check if CPU name contains "Intel(R) Core(TM) i7 CPU 920"
+echo %cpu_name% | find "Intel(R) Core(TM) i7 CPU 920" > nul
+if %errorlevel% equ 0 (
+    call "!sdkScriptsDirPath!\utils.bat" WriteLine "** WARNING: PaddlePaddle may fail on the Intel 920 CPU"
+)
+
 REM TODO: Check paddleocr created and has files
 REM set moduleInstallErrors=...
 
