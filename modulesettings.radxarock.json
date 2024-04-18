@@ -7,7 +7,7 @@
         "Runtime": "python3.9"  // needs to be 3.9 to match the wheel from QEngineering
       },
       "GpuOptions" : {
-        "InstallGPU": false     // PaddlePaddle-GPU supported for Orange Pi is in ALPR-RKNN module
+        "InstallGPU": false     // PaddlePaddle-GPU supported for Radxa ROCK is in ALPR-RKNN module
       }
     }
   }

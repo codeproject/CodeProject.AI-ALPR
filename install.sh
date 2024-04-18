@@ -20,7 +20,8 @@ if [ "$1" != "install" ]; then
     exit 1 
 fi
 
-if [ "${systemName}" = "Raspberry Pi" ] || [ "${systemName}" = "Orange Pi" ]; then
+if [ "${systemName}" = "Raspberry Pi" ] || [ "${systemName}" = "Orange Pi" ] || \
+   [ "${systemName}" = "Radxa ROCK"   ]; then
 
     installPythonPackagesByName "opencv-python>=4.2.0" "OpenCV, the Computer Vision library for Python"
 
