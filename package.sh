@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Module Packaging script. To be called from create_packages.sh
+# Module Packaging script. To be called by: bash ../../CodeProject.AI-Server-Private/src/create_packages.sh
 
 moduleId=$1
 version=$2
