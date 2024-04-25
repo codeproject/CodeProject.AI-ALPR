@@ -3,10 +3,10 @@
 
     "ALPR": {
       "Name": "License Plate Reader",
-      "Version": "3.1.0",
+      "Version": "3.2.0",
 
       "PublishingInfo" : {
-        "Description": "Detects and readers single-line and multi-line licence plates using YOLO object detection and the PaddleOCR toolkit",
+        "Description": "Detects and readers single-line and multi-line license plates using YOLO object detection and the PaddleOCR toolkit",
         "IconURL": null,
         "Category": "Computer Vision",
         "Stack": "Python, PaddlePaddle",
@@ -78,7 +78,8 @@
           { "ModuleVersion": "3.0.1", "ServerVersionRange": [ "2.5.2",     ""   ], "ReleaseDate": "2024-02-13", "ReleaseNotes": "Corrected NoneType error when auto-rotating plates" },
           { "ModuleVersion": "3.0.2", "ServerVersionRange": [ "2.5.2",     ""   ], "ReleaseDate": "2024-02-18", "ReleaseNotes": "Added dashboard menu to set plate confidence, auto-rotate and OCR optimisation", "Importance": "Minor" },
           { "ModuleVersion": "3.0.3", "ServerVersionRange": [ "2.5.2",     ""   ], "ReleaseDate": "2024-02-28", "ReleaseNotes": "Added dashboard menu to set remove spaces and save cropped plate", "Importance": "Minor" },
-          { "ModuleVersion": "3.1.0", "ServerVersionRange": [ "2.5.2",     ""   ], "ReleaseDate": "2024-02-28", "ReleaseNotes": "Updated for server 2.6" }
+          { "ModuleVersion": "3.1.0", "ServerVersionRange": [ "2.5.2",     ""   ], "ReleaseDate": "2024-02-28", "ReleaseNotes": "Updated for server 2.6" },
+          { "ModuleVersion": "3.2.0", "ServerVersionRange": [ "2.7.0",     ""   ], "ReleaseDate": "2024-04-25", "ReleaseNotes": "Updated to CodeProject.AI Server 2.7" }
         ]
       },
 

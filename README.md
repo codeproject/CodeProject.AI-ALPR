@@ -13,12 +13,14 @@ This is an Automatic License Plate Recognition (ALPR) module for [CodeProject.AI
     ```text
     CodeProject
       - CodeProject.AI-Server
-         - demos
          - src
-         - ... etc
+           - demos
+           - server
+           - ... etc
+         - tests
       - CodeProject.AI-Modules
-         - ALPR
-         (this repo)
+         - CodeProject.AI-ALPR (this repo)
+         ...
     ```
 
 3. **If you have NOT run dev setup on the server**

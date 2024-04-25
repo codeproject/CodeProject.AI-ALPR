@@ -7,9 +7,7 @@ from typing import Tuple
 import utils.tools as tool
 from utils.cartesian import *
 
-from module_runner import ModuleRunner
-from module_logging import LogVerbosity
-from common import JSON
+from codeproject_ai_sdk import LogVerbosity, ModuleRunner, JSON
 
 from PIL import Image
 import cv2

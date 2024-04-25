@@ -1,34 +1,19 @@
 # Import our general libraries
-import os
-import sys
 import time
 
-#-------------------------------------------------------------------------------
-# TODO: Replace this with a PyPi module
+# Import CodeProject.AI SDK
+from codeproject_ai_sdk import RequestData, ModuleRunner, JSON
 
-# Import the CodeProject.AI SDK. This will add to the PATH for future imports
-if os.path.exists("../../SDK/Python"):
-    sys.path.append("../../SDK/Python")
-if os.path.exists("../../CodeProject.AI-Server/SDK/Python"):
-    sys.path.append("../../CodeProject.AI-Server/SDK/Python")
-if os.path.exists("../../CodeProject.AI-Server/src/SDK/Python"):
-    sys.path.append("../../CodeProject.AI-Server/src/SDK/Python")
-
-from request_data import RequestData
-from module_runner import ModuleRunner
-from common import JSON
-#-------------------------------------------------------------------------------
-
-from options import Options
-
+# import modules we've installed as for this module to work
 from PIL import Image
 
 # Import the method of the module we're wrapping
 from ALPR import init_detect_platenumber, detect_platenumber
 
+# Import our helpers
+from options import Options
 
 class ALPR_adapter(ModuleRunner):
-
 
     def __init__(self):
         super().__init__()

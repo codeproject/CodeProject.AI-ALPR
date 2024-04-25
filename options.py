@@ -1,5 +1,6 @@
 import os
-from module_options import ModuleOptions
+
+from codeproject_ai_sdk import ModuleOptions
 
 class Options:
 
