@@ -4,7 +4,7 @@
 ::
 :: This script is called from the ALPR directory using: 
 ::
-::    ..\..\setup.bat
+::    ..\..\CodeProject.AI-Server\src\setup.bat
 ::
 :: The setup.bat file will find this install.bat file and execute it.
 ::
@@ -12,7 +12,7 @@
 :: and explanations, see /src/modules/install_script_help.md
 
 @if "%1" NEQ "install" (
-    echo This script is only called from ..\..\setup.bat
+    echo This script is only called from ..\..\CodeProject.AI-Server\src\setup.bat
     @pause
     @goto:eof
 )

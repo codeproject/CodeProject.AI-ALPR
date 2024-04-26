@@ -6,7 +6,7 @@
 #
 # This script is called from the ALPR directory using: 
 #
-#    bash ../../setup.sh
+#    bash ../../CodeProject.AI-Server/src/setup.sh
 #
 # The setup.sh file will find this install.sh file and execute it.
 #
@@ -15,7 +15,7 @@
 
 if [ "$1" != "install" ]; then
     echo
-    read -t 3 -p "This script is only called from: bash ../../setup.sh"
+    read -t 3 -p "This script is only called from: bash ../../CodeProject.AI-Server/src/setup.sh"
     echo
     exit 1 
 fi
@@ -100,7 +100,7 @@ if [ "${module_install_errors}" = "" ] && [ "$os" = "linux" ] && [ "$architectur
     if [ ! -f /usr/lib/x86_64-linux-gnu/libssl.so.1.1 ] || [ ! -e /usr/lib/libcrypto.so.1.1 ]; then
 
         # output a warning message if no admin rights and instruct user on manual steps
-        install_instructions="cd ${moduleDirPath}${newline}sudo bash ../../setup.sh"
+        install_instructions="cd ${moduleDirPath}${newline}sudo bash ../../CodeProject.AI-Server/src/setup.sh"
         checkForAdminAndWarn "$install_instructions"
 
         if [ "$isAdmin" = true ] || [ "$attemptSudoWithoutAdminRights" = true ]; then
