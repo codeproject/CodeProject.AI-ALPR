@@ -1,5 +1,27 @@
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options directory
+.vs/
+
 # Misc
 .DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Linux utilities
+wget-log*
 
 # Python cache
 __pycache__/
