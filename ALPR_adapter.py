@@ -1,8 +1,19 @@
 # Import our general libraries
 import time
 
+# Manually installing CodeProject.AI SDK requirements until we get the issue with
+# our SDK PyPi sorted out
+#
 # Import CodeProject.AI SDK
-from codeproject_ai_sdk import RequestData, ModuleRunner, JSON
+# from codeproject_ai_sdk import LogVerbosity, ModuleRunner, JSON
+#
+import os
+import sys
+if os.path.exists("../../CodeProject.AI-Server/src/SDK/Python"):
+    sys.path.append("../../CodeProject.AI-Server/src/SDK/Python")
+from request_data import RequestData
+from module_runner import ModuleRunner
+from common import JSON
 
 # import modules we've installed as for this module to work
 from PIL import Image

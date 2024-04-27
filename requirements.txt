@@ -8,6 +8,15 @@ Pillow<10.0.0                   # Installing Pillow, a Python Image Library
 opencv-python                   # Installing OpenCV, the Computer Vision library for Python
 numpy                           # Installing NumPy, a package for scientific computing
 
-CodeProject-AI-SDK              # Installing the CodeProject.AI SDK
+# CodeProject-AI-SDK              # Installing the CodeProject.AI SDK
+
+# Manually installing CodeProject.AI SDK requirements until we get the issue with
+# our SDK PyPi sorted out
+Pillow                      # Installing Pillow, a Python Image Library
+charset-normalizer          # Installing Charset normalizer
+aiohttp                     # Installing aiohttp, the Async IO HTTP library
+aiofiles                    # Installing aiofiles, the Async IO Files library
+py-cpuinfo                  # Installing py-cpuinfo to allow us to query CPU info
+requests                    # Installing Requests, the HTTP library
 
 # end of file

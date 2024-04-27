@@ -1,6 +1,15 @@
 import os
 
-from codeproject_ai_sdk import ModuleOptions
+# Manually installing CodeProject.AI SDK requirements until we get the issue with
+# our SDK PyPi sorted out
+#
+# from codeproject_ai_sdk import ModuleOptions
+#
+import os
+import sys
+if os.path.exists("../../CodeProject.AI-Server/src/SDK/Python"):
+    sys.path.append("../../CodeProject.AI-Server/src/SDK/Python")
+from module_options import ModuleOptions
 
 class Options:
 
