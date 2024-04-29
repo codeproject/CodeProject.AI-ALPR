@@ -5,7 +5,7 @@
     <ProjectGuid>6ae28b59-221b-4e3d-a66c-e255b26dac82</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>ALPR_adapter.py</StartupFile>
-    <SearchPath>..\SDK\Python</SearchPath>
+    <SearchPath>bin\windows\python39\venv\Lib\site-packages</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>ALPR</Name>

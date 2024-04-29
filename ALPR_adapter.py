@@ -1,6 +1,9 @@
 # Import our general libraries
 import time
 
+# this prevents a error in the _distutils_hack package
+import setuptools
+
 # Import CodeProject.AI SDK
 from codeproject_ai_sdk import RequestData, ModuleRunner, JSON
 
