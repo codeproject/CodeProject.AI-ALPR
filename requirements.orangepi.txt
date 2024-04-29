@@ -9,6 +9,4 @@ Pillow<10.0.0                   # Installing Pillow, a Python Image Library
 #opencv-python>=4.2.0           # Will install >4.2 first in script
 numpy==1.23.3                   # Installing NumPy, a package for scientific computing
 
-CodeProject-AI-SDK              # Installing the CodeProject.AI SDK
-
-# end of file
+CodeProject-AI-SDK              # Installing the CodeProject.AI SDK# end of file

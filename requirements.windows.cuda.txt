@@ -20,6 +20,5 @@ numpy                           # Installing NumPy, a package for scientific com
 # - NVIDIA CUDA download archive: https://developer.nvidia.com/cuda-toolkit-archive
 # - PaddlePaddle setup matrix: https://www.paddlepaddle.org.cn/en
 
-CodeProject-AI-SDK          # Installing the CodeProject.AI SDK
-
+CodeProject-AI-SDK              # Installing the CodeProject.AI SDK
 # end of file

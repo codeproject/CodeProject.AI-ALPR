@@ -15,5 +15,4 @@ opencv-python                   # Installing OpenCV, the Computer Vision library
 numpy                           # Installing NumPy, a package for scientific computing
 
 CodeProject-AI-SDK              # Installing the CodeProject.AI SDK
-
 # end of file

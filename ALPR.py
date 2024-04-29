@@ -7,25 +7,7 @@ from typing import Tuple
 import utils.tools as tool
 from utils.cartesian import *
 
-# Manually installing CodeProject.AI SDK requirements until we get the issue with
-# our SDK PyPi sorted out
-#
-# Import CodeProject.AI SDK
-# from codeproject_ai_sdk import LogVerbosity, ModuleRunner, JSON
-#
-import os
-import sys
-if os.path.exists("../../CodeProject.AI-Server/src/SDK/Python"):
-    sys.path.append("../../CodeProject.AI-Server/src/SDK/Python")
-from module_runner import ModuleRunner
-from module_logging import LogVerbosity
-from common import JSON
-
-import os
-import sys
-if os.path.exists("../../CodeProject.AI-Server/src/SDK/Python"):
-    sys.path.append("../../CodeProject.AI-Server/src/SDK/Python")
-
+from from codeproject_ai_sdk import LogVerbosity, ModuleRunner, JSON
 from PIL import Image
 import cv2
 import numpy as np
