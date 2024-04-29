@@ -7,7 +7,8 @@ from typing import Tuple
 import utils.tools as tool
 from utils.cartesian import *
 
-from from codeproject_ai_sdk import LogVerbosity, ModuleRunner, JSON
+from codeproject_ai_sdk import LogVerbosity, ModuleRunner, JSON
+
 from PIL import Image
 import cv2
 import numpy as np
