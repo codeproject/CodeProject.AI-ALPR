@@ -38,7 +38,3 @@ paddleocr
 
 # Python install / Virtual environment
 bin/
-/.vs/ALPR/FileContentIndex
-/.vs/ALPR/v17
-/.vs/ALPR/copilot-chat/2e552242/sessions
-*.user
