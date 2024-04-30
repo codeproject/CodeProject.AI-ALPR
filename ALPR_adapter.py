@@ -1,7 +1,8 @@
 # Import our general libraries
 import time
 
-# this prevents a error in the _distutils_hack package
+# SetupTools replaces DistUtils, but if a package imports distutils before 
+# setuptools then setuptools will chuck a wobbly. This is a prophylactic.
 import setuptools
 
 # Import CodeProject.AI SDK
