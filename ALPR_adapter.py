@@ -1,9 +1,11 @@
 # Import our general libraries
 import time
+import sys
+sys.path.insert(0, "c:\Dev\CodeProject.AI\CodeProject.AI-Server\src\SDK\Python\src")
 
 # SetupTools replaces DistUtils, but if a package imports distutils before 
 # setuptools then setuptools will chuck a wobbly. This is a prophylactic.
-import setuptools
+##import setuptools
 
 # Import CodeProject.AI SDK
 from codeproject_ai_sdk import RequestData, ModuleRunner, JSON
