@@ -8,7 +8,7 @@
             },
 
             "name": "Launch ALPR",
-            "type": "python",
+            "type": "debugpy",
             "justMyCode": false,
             "request": "launch",
             "program": "ALPR_adapter.py",
@@ -24,7 +24,6 @@
             },
 
             "python": "${workspaceFolder}\\bin\\windows\\python39\\venv\\Scripts\\python.exe",
-            // "python": "${workspaceFolder}/bin/linux/python38/venv/bin/python",
             "windows": {
                 "python": "${workspaceFolder}/bin/windows/python39/venv/Scripts/python.exe"
             },
