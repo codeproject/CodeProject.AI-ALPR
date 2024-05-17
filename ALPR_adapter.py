@@ -1,7 +1,5 @@
 # Import our general libraries
 import time
-import sys
-sys.path.insert(0, "c:\Dev\CodeProject.AI\CodeProject.AI-Server\src\SDK\Python\src")
 
 # Import CodeProject.AI SDK
 from codeproject_ai_sdk import RequestData, ModuleRunner, JSON
