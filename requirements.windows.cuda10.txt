@@ -1,5 +1,7 @@
 #! Python3.7
 
+numpy<2                         # Installing NumPy, a package for scientific computing
+
 # PaddlePaddle from PyPi is for CUDA 10.2 only. Need to use paddlepaddle.org for other CUDA versions
 paddlepaddle-gpu==2.6.0         # Installing PaddlePaddle, Parallel Distributed Deep Learning
 
@@ -9,7 +11,6 @@ paddleocr==2.7.0.3              # Installing PaddleOCR, the OCR toolkit based on
 imutils                         # Installing imutils, the image utilities library
 Pillow<10.0.0                   # Installing Pillow, a Python Image Library
 opencv-python                   # Installing OpenCV, the Computer Vision library for Python
-numpy                           # Installing NumPy, a package for scientific computing
 
 CodeProject-AI-SDK              # Installing the CodeProject.AI SDK
 # end of file
