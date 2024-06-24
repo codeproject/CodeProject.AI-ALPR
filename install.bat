@@ -17,6 +17,9 @@
     @goto:eof
 )
 
+REM Backwards compatibility with Server 2.6.5
+if "!utilsScript!" == "" if "!sdkScriptsDirPath!" NEQ "" set utilsScript=%sdkScriptsDirPath%\utils.bat
+
 :: Download the ALPR models and store in /paddleocr
 call "%utilsScript%" GetFromServer "models/" "ocr-en-pp_ocrv4-paddle.zip" "paddleocr" "Downloading ALPR models..."
 
