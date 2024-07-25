@@ -2,6 +2,9 @@
   "Modules": {
 
     "ALPR": {
+      "LaunchSettings": {
+        "Runtime": "python3.9"
+      },
       "GpuOptions" : {
         "InstallGPU": false   // PaddlePaddle-GPU isn't supported on macOS
       }
