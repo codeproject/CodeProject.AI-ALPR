@@ -138,10 +138,14 @@ if [ "${module_install_errors}" = "" ] && [ "$os" = "linux" ] && [ "$architectur
 fi
 
 if [ "$os" = "macos" ]; then
+
+    # The Numpy Debacle, 2024
+    installPythonPackagesByName "numpy==1.23.3"               "NumPy, a package for scientific computing"
+
     if [ "$os_name" = "Big Sur" ]; then   # macOS 11.x on Intel, kernal 20.x
         # https://github.com/opencv/opencv-python/issues/777
         installPythonPackagesByName "opencv-python==4.6.0.66" "OpenCV 4.8, the Computer Vision library for Python"
-    elif [ "$arcbhitecture" == "arm64" ]; then
+    elif [ "$architecture" == "arm64" ]; then
         installPythonPackagesByName "opencv-python==4.5.5.64" "OpenCV 4.5, the Computer Vision library for Python"
     else
         installPythonPackagesByName "opencv-python"           "OpenCV, the Computer Vision library for Python"
