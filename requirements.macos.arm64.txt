@@ -11,9 +11,9 @@ numpy==1.23.3                   # Installing NumPy, a package for scientific com
 paddlepaddle==2.3.2             # Installing PaddelPaddle, the R and D deep learning platform
 paddleocr==2.6.0.1              # Installing PaddleOCR, the OCR toolkit based on PaddlePaddle
 
+# OpenCV installed directly by install script
 # opencv-python==4.5.5.64       # Installing OpenCV, the Computer Vision library for Python
 imutils                         # Installing imutils, the image utilities library
-Pillow<10.0.0                   # Installing Pillow, a Python Image Library
 
 CodeProject-AI-SDK              # Installing the CodeProject.AI SDK
 # end of file

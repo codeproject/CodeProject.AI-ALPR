@@ -10,7 +10,6 @@ paddlepaddle==2.6.0             # Installing PaddelPaddle, the Deep Learning pla
 paddleocr==2.7.0.3              # Installing PaddleOCR, the OCR toolkit based on PaddlePaddle
 
 imutils                         # Installing imutils, the image utilities library
-Pillow<10.0.0                   # Installing Pillow, a Python Image Library
 opencv-python                   # Installing OpenCV, the Computer Vision library for Python
 
 CodeProject-AI-SDK              # Installing the CodeProject.AI SDK

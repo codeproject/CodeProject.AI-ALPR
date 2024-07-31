@@ -1,6 +1,6 @@
 #! Python3.7
 
-CodeProject-AI-SDK              # Installing the CodeProject.AI SDK
+numpy<2                         # Installing NumPy, a package for scientific computing
 
 # PaddlePaddle from PyPi is for CUDA 10.2 only. Need to use paddlepaddle.org for other CUDA versions
 -f https://www.paddlepaddle.org.cn/whl/windows/mkl/avx/stable.html
@@ -10,5 +10,7 @@ paddlepaddle-gpu==2.6.0.post120 # Installing PaddlePaddle, Parallel Distributed 
 paddleocr==2.7.0.3              # Installing PaddleOCR, the OCR toolkit based on PaddlePaddle
 
 imutils                         # Installing imutils, the image utilities library
+
+CodeProject-AI-SDK              # Installing the CodeProject.AI SDK
 
 # end of file
