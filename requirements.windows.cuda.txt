@@ -9,11 +9,9 @@ paddlepaddle-gpu                # Installing PaddlePaddle, the Deep Learning pla
 paddleocr==2.7.0.3              # Installing PaddleOCR, the OCR toolkit based on PaddlePaddle
 
 imutils                         # Installing imutils, the image utilities library
-Pillow<10.0.0                   # Installing Pillow, a Python Image Library
 opencv-python                   # Installing OpenCV, the Computer Vision library for Python
 
-# end of files
-# NOTE: for older NVIDIA cards we're seeing issues OCR. Either the OCR fails entirely
+# NOTE: for older NVIDIA cards we're seeing issues with OCR. Either the OCR fails entirely
 # or it returns garbled text. There is a discussion:
 # A working combo is  paddlepaddle-gpu==2.3.2 cuda==10.1 cudnn==7.6.5 paddleocr==2.6.
 # Links:

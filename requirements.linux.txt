@@ -1,5 +1,7 @@
 #! Python3.8
 
+numpy<2.0                       # Installing NumPy, a package for scientific computing
+
 paddlepaddle==2.6.0             # Installing PaddelPaddle, the Deep Learning platform
 
 ## We also need to specify the exact version for paddleocr in Linux because 
