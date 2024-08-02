@@ -3,7 +3,7 @@
 
     "ALPR": {
       "Name": "License Plate Reader",
-      "Version": "3.2.2",
+      "Version": "3.3.0",
 
       "PublishingInfo" : {
         "Description": "Detects and readers single-line and multi-line license plates using YOLO object detection and the PaddleOCR toolkit",
@@ -70,18 +70,19 @@
           { "ModuleVersion": "2.7.5", "ServerVersionRange": [ "2.4.2", "2.4.7"  ], "ReleaseDate": "2023-12-09", "ReleaseNotes": "Installer updates", "Importance": "Minor" },
           { "ModuleVersion": "2.8.0", "ServerVersionRange": [ "2.5.0-RC1", "2.5.0-RC5" ], "ReleaseDate": "2024-01-06", "ReleaseNotes": "Additions for dynamic explorer UI" },
           { "ModuleVersion": "2.8.1", "ServerVersionRange": [ "2.5.0-RC1", "2.5.0-RC5" ], "ReleaseDate": "2024-01-13", "ReleaseNotes": "Changes to SDK" },
-          { "ModuleVersion": "2.8.2", "ServerVersionRange": [ "2.5.0-RC6", ""   ], "ReleaseDate": "2024-01-16", "ReleaseNotes": "Updated modulesettings schema" },
-          { "ModuleVersion": "2.8.3", "ServerVersionRange": [ "2.5.0-RC6", ""   ], "ReleaseDate": "2024-01-18", "ReleaseNotes": "Updated explorer" },
-          { "ModuleVersion": "2.9.0", "ServerVersionRange": [ "2.5.0-RC6", ""   ], "ReleaseDate": "2024-01-21", "ReleaseNotes": "Module performance statistics added" },
-          { "ModuleVersion": "2.9.1", "ServerVersionRange": [ "2.5.2",     ""   ], "ReleaseDate": "2024-02-08", "ReleaseNotes": "Support for CodeProject.AI Server 2.5.2+" },
-          { "ModuleVersion": "3.0.0", "ServerVersionRange": [ "2.5.2",     ""   ], "ReleaseDate": "2024-02-11", "ReleaseNotes": "Updated text recognition model to PP-OCRv4 and added AI auto rotation" },
-          { "ModuleVersion": "3.0.1", "ServerVersionRange": [ "2.5.2",     ""   ], "ReleaseDate": "2024-02-13", "ReleaseNotes": "Corrected NoneType error when auto-rotating plates" },
-          { "ModuleVersion": "3.0.2", "ServerVersionRange": [ "2.5.2",     ""   ], "ReleaseDate": "2024-02-18", "ReleaseNotes": "Added dashboard menu to set plate confidence, auto-rotate and OCR optimisation", "Importance": "Minor" },
-          { "ModuleVersion": "3.0.3", "ServerVersionRange": [ "2.5.2",     ""   ], "ReleaseDate": "2024-02-28", "ReleaseNotes": "Added dashboard menu to set remove spaces and save cropped plate", "Importance": "Minor" },
-          { "ModuleVersion": "3.1.0", "ServerVersionRange": [ "2.5.2",     ""   ], "ReleaseDate": "2024-02-28", "ReleaseNotes": "Updated for server 2.6" },
-          { "ModuleVersion": "3.2.0", "ServerVersionRange": [ "2.6.5",     ""   ], "ReleaseDate": "2024-04-25", "ReleaseNotes": "Updated to CodeProject.AI Server 2.6.5" }, //  was 2.7
-          { "ModuleVersion": "3.2.1", "ServerVersionRange": [ "2.6.5",     ""   ], "ReleaseDate": "2024-06-21", "ReleaseNotes": "Corrected Numpy 2.0 issue" },
-          { "ModuleVersion": "3.2.2", "ServerVersionRange": [ "2.6.5",     ""   ], "ReleaseDate": "2024-06-26", "ReleaseNotes": "Corrections to compatibility settings" }
+          { "ModuleVersion": "2.8.2", "ServerVersionRange": [ "2.5.0-RC6", "2.7.0" ], "ReleaseDate": "2024-01-16", "ReleaseNotes": "Updated modulesettings schema" },
+          { "ModuleVersion": "2.8.3", "ServerVersionRange": [ "2.5.0-RC6", "2.7.0" ], "ReleaseDate": "2024-01-18", "ReleaseNotes": "Updated explorer" },
+          { "ModuleVersion": "2.9.0", "ServerVersionRange": [ "2.5.0-RC6", "2.7.0" ], "ReleaseDate": "2024-01-21", "ReleaseNotes": "Module performance statistics added" },
+          { "ModuleVersion": "2.9.1", "ServerVersionRange": [ "2.5.2", "2.7.0"  ], "ReleaseDate": "2024-02-08", "ReleaseNotes": "Support for CodeProject.AI Server 2.5.2+" },
+          { "ModuleVersion": "3.0.0", "ServerVersionRange": [ "2.5.2", "2.7.0"  ], "ReleaseDate": "2024-02-11", "ReleaseNotes": "Updated text recognition model to PP-OCRv4 and added AI auto rotation" },
+          { "ModuleVersion": "3.0.1", "ServerVersionRange": [ "2.5.2", "2.7.0"  ], "ReleaseDate": "2024-02-13", "ReleaseNotes": "Corrected NoneType error when auto-rotating plates" },
+          { "ModuleVersion": "3.0.2", "ServerVersionRange": [ "2.5.2", "2.7.0"  ], "ReleaseDate": "2024-02-18", "ReleaseNotes": "Added dashboard menu to set plate confidence, auto-rotate and OCR optimisation", "Importance": "Minor" },
+          { "ModuleVersion": "3.0.3", "ServerVersionRange": [ "2.5.2", "2.7.0"  ], "ReleaseDate": "2024-02-28", "ReleaseNotes": "Added dashboard menu to set remove spaces and save cropped plate", "Importance": "Minor" },
+          { "ModuleVersion": "3.1.0", "ServerVersionRange": [ "2.5.2", "2.7.0"  ], "ReleaseDate": "2024-02-28", "ReleaseNotes": "Updated for server 2.6" },
+          { "ModuleVersion": "3.2.0", "ServerVersionRange": [ "2.6.5", "2.7.0"  ], "ReleaseDate": "2024-04-25", "ReleaseNotes": "Updated to CodeProject.AI Server 2.6.5" }, //  was 2.7
+          { "ModuleVersion": "3.2.1", "ServerVersionRange": [ "2.6.5", "2.7.0"  ], "ReleaseDate": "2024-06-21", "ReleaseNotes": "Corrected Numpy 2.0 issue" },
+          { "ModuleVersion": "3.2.2", "ServerVersionRange": [ "2.6.5", "2.7.0"  ], "ReleaseDate": "2024-06-26", "ReleaseNotes": "Corrections to compatibility settings" },
+          { "ModuleVersion": "3.3.0", "ServerVersionRange": [ "2.8.0",     ""   ], "ReleaseDate": "2024-08-02", "ReleaseNotes": "Updated for server 2.8" }
         ]
       },
 
