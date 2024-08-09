@@ -135,33 +135,36 @@ async def detect_platenumber(module_runner: ModuleRunner, opts: Options, image: 
             angle_count = 0
             res         = None
 
-            bounding_box_result = ocr.ocr(numpy_plate, rec=False, cls=False)
-                       
-            for box in range(len(bounding_box_result)):
-                res = bounding_box_result[box]
-                if res:
-                    if len(res) == 4 and len(res[0]) == 2:
-                        x1, y1 = res[0][0], res[0][1]
-                        x2, y2 = res[1][0], res[1][1]
-                        angle += tool.calculate_angle(x1, y1, x2, y2)
-                        angle_count += 1
-                    else:
-                        for line in res:
-                            x1, y1 = line[0][0], line[0][1]
-                            x2, y2 = line[1][0], line[1][1]
+            bounding_box_result = None
+            try:
+                bounding_box_result = ocr.ocr(numpy_plate, rec=False, cls=False)           
+                for box in range(len(bounding_box_result)):
+                    res = bounding_box_result[box]
+                    if res:
+                        if len(res) == 4 and len(res[0]) == 2:
+                            x1, y1 = res[0][0], res[0][1]
+                            x2, y2 = res[1][0], res[1][1]
                             angle += tool.calculate_angle(x1, y1, x2, y2)
                             angle_count += 1
+                        else:
+                            for line in res:
+                                x1, y1 = line[0][0], line[0][1]
+                                x2, y2 = line[1][0], line[1][1]
+                                angle += tool.calculate_angle(x1, y1, x2, y2)
+                                angle_count += 1
 
-                            x1, y1 = line[3][0], line[3][1]
-                            x2, y2 = line[2][0], line[2][1]
-                            angle += tool.calculate_angle(x1, y1, x2, y2)
-                            angle_count += 1
+                                x1, y1 = line[3][0], line[3][1]
+                                x2, y2 = line[2][0], line[2][1]
+                                angle += tool.calculate_angle(x1, y1, x2, y2)
+                                angle_count += 1
 
-            plate_rotate_deg = angle / angle_count if angle_count > 0 else 0
+                plate_rotate_deg = angle / angle_count if angle_count > 0 else 0
             
-            if debug_log:
-                with open("log.txt", "a") as text_file:
-                    text_file.write(str(plate_rotate_deg) + "  " + str(angle_count) + "\n" + "\n")
+                if debug_log:
+                    with open("log.txt", "a") as text_file:
+                        text_file.write(str(plate_rotate_deg) + "  " + str(angle_count) + "\n" + "\n")
+            except:
+                plate_rotate_deg = 0
             
         else:
             plate_rotate_deg = opts.plate_rotate_deg

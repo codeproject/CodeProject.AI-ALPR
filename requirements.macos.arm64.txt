@@ -1,6 +1,6 @@
 #! Python3.8
 
-numpy==1.23.3                   # Installing NumPy, a package for scientific computing
+numpy<2.0                       # Installing NumPy, a package for scientific computing
 
 # What PaddlePaddle says:
 # -i https://mirror.baidu.com/pypi/simple
@@ -16,4 +16,5 @@ paddleocr==2.6.0.1              # Installing PaddleOCR, the OCR toolkit based on
 imutils                         # Installing imutils, the image utilities library
 
 CodeProject-AI-SDK              # Installing the CodeProject.AI SDK
+
 # end of file
