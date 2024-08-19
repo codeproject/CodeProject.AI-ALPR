@@ -24,18 +24,23 @@ if "!utilsScript!" == "" if "!sdkScriptsDirPath!" NEQ "" set utilsScript=%sdkScr
 :: Download the ALPR models and store in /paddleocr
 call "%utilsScript%" GetFromServer "models/" "ocr-en-pp_ocrv4-paddle.zip" "paddleocr" "Downloading ALPR models..."
 
+call "!utilsScript!" Write "Checking CPU compatibility..." 
 
 REM Intel i7 920 CPUs have trouble with paddlepaddle
-for /f "tokens=2 delims==" %%I in ('wmic cpu get name /value') do (
-    set "cpu_name=%%I"
-    goto :break_loop
-)
-:break_loop
+REM Not everyone has WMIC installed
+:: for /f "tokens=2 delims==" %%I in ('wmic cpu get name /value') do (
+::     set "cpu_name=%%I"
+::     goto :break_loop
+:: )
+:: :break_loop
+for /f "tokens=*" %%A in ('powershell -NoProfile -Command "Get-CimInstance -ClassName Win32_Processor | Select-Object -ExpandProperty Name"') do set cpu_name=%%A
 
 REM Check if CPU name contains "Intel(R) Core(TM) i7 CPU 920"
 echo %cpu_name% | find "Intel(R) Core(TM) i7 CPU 920" > nul
 if %errorlevel% equ 0 (
     call "!utilsScript!" WriteLine "** WARNING: PaddlePaddle may fail on the Intel 920 CPU"
+) else (
+    call "!utilsScript!" WriteLine "All good" !color_success!
 )
 
 REM Empty command to clear errorlevel
