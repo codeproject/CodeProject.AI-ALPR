@@ -1,5 +1,5 @@
 @Echo off
-REM Module Packaging script. To be called from ..\..\CodeProject.AI-Server-Private\src\create_packages.bat
+REM Module Packaging script. To be called from ..\..\CodeProject.AI-Server\devops\build\create_packages.bat
 
 set moduleId=%~1
 set version=%~2

@@ -46,9 +46,9 @@ Assuming the folder structure outlined above, run
 
    ```BAT
    REM For Windows
-   ..\..\CodeProject.AI-Server\src\create_packages.bat
+   ..\..\CodeProject.AI-Server\devops\build\create_packages.bat
    ```
    ```bash
    # For Linux/macOS
-   bash ../../CodeProject.AI-Server/src/create_packages.sh
+   bash ../../CodeProject.AI-Server/devops/build/create_packages.sh
    ```
