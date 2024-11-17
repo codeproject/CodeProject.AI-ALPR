@@ -17,7 +17,6 @@
             "cwd": "${workspaceFolder}",
 
             "env": {
-                "DEBUG_IN_VSCODE": "True",
                 "RUNNING_IN_VSCODE": "True",
                 // "CPAI_LOG_VERBOSITY": "Loud",
                 "CPAI_PORT": "32168"
