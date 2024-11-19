@@ -47,16 +47,18 @@ REM Empty command to clear errorlevel
 cd > nul
 
 REM PaddlePaddle is very, very fussy
-call "!utilsScript!" Write "Checking cuDNN version..." 
-if "!cuDNN_major_version!" neq "8" (
-    call "!utilsScript!" WriteLine
-    call "!utilsScript!" WriteLine "** WARNING: PaddlePaddle requires cuDNN 8 but instead found !cuDNN_major_version!." !color_error!
-    call "!utilsScript!" WriteLine "            Disabling CUDA support. Consider installing cuDNN 8 and " !color_error!
-    call "!utilsScript!" WriteLine "            reinstalling this module in order to enable GPU support." !color_error!
-    call "!utilsScript!" WriteLine
-    set hasCUDA=false
-) else (
-    call "!utilsScript!" WriteLine "All good" !color_success!
+if %hasCUDA% == "true" (
+    call "!utilsScript!" Write "Checking cuDNN version..." 
+    if "!cuDNN_major_version!" neq "8" (
+        call "!utilsScript!" WriteLine
+        call "!utilsScript!" WriteLine "** WARNING: PaddlePaddle requires cuDNN 8 but instead found !cuDNN_major_version!." !color_error!
+        call "!utilsScript!" WriteLine "            Disabling CUDA support. Consider installing cuDNN 8 and " !color_error!
+        call "!utilsScript!" WriteLine "            reinstalling this module in order to enable GPU support." !color_error!
+        call "!utilsScript!" WriteLine
+        set hasCUDA=false
+    ) else (
+        call "!utilsScript!" WriteLine "All good" !color_success!
+    )
 )
 
 REM TODO: Check paddleocr created and has files
