@@ -1,6 +1,13 @@
 {
     "cSpell.words": [
         "ALPR",
+        "CUDA",
+        "errorlevel",
+        "imutils",
+        "numpy",
+        "opencv",
+        "paddleocr",
+        "paddlepaddle",
         "Radxa",
         "RKNN"
     ],

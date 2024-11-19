@@ -15,8 +15,10 @@
 
 REM We have a patch to apply for everyone else due to a bad truthy test on a
 REM multi-dimensional array in paddleocr 2.7.0.3
-call "%utilsScript%" WriteLine "Applying PaddleOCR patch"
-copy "!moduleDirPath!\patch\paddleocr-2.7.0.3\paddleocr.py" "!packagesDirPath!\paddleocr\."
+if "!hasCUDA!" == "false" (
+    call "%utilsScript%" WriteLine "Applying PaddleOCR patch"
+    copy "!moduleDirPath!\patch\paddleocr-2.7.0.3\paddleocr.py" "!packagesDirPath!\paddleocr\."
+)
 
 REM TODO: Check assets created and has files
 REM set moduleInstallErrors=...
