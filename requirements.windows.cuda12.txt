@@ -2,7 +2,8 @@
 
 numpy<2                         # Installing NumPy, a package for scientific computing
 
-paddlepaddle-gpu                # Installing PaddlePaddle, Parallel Distributed Deep Learning
+-f https://www.paddlepaddle.org.cn/whl/windows/mkl/avx/stable.html
+paddlepaddle-gpu==2.6.1.post120 # Installing PaddlePaddle, Parallel Distributed Deep Learning
 paddleocr                       # Installing PaddleOCR, the OCR toolkit based on PaddlePaddle
 
 imutils                         # Installing imutils, the image utilities library
