@@ -3,7 +3,7 @@
 
     "ALPR": {
       "Name": "License Plate Reader",
-      "Version": "3.3.1",
+      "Version": "3.3.2",
 
       "PublishingInfo" : {
         "Description": "Detects and readers single-line and multi-line license plates using YOLO object detection and the PaddleOCR toolkit",
@@ -83,7 +83,8 @@
           { "ModuleVersion": "3.2.1", "ServerVersionRange": [ "2.6.5", "2.7.0"  ], "ReleaseDate": "2024-06-21", "ReleaseNotes": "Corrected Numpy 2.0 issue" },
           { "ModuleVersion": "3.2.2", "ServerVersionRange": [ "2.6.5", "2.7.0"  ], "ReleaseDate": "2024-06-26", "ReleaseNotes": "Corrections to compatibility settings" },
           { "ModuleVersion": "3.3.0", "ServerVersionRange": [ "2.8.0", "2.9.0"  ], "ReleaseDate": "2024-08-02", "ReleaseNotes": "Updated for server 2.8" },
-          { "ModuleVersion": "3.3.1", "ServerVersionRange": [ "2.8.0",     ""   ], "ReleaseDate": "2024-11-23", "ReleaseNotes": "Improved cuDNN check" }
+          { "ModuleVersion": "3.3.1", "ServerVersionRange": [ "2.8.0", "2.9.3"  ], "ReleaseDate": "2024-11-23", "ReleaseNotes": "Improved cuDNN check" },
+          { "ModuleVersion": "3.3.2", "ServerVersionRange": [ "2.9.4", "" ], "ReleaseDate": "2024-11-26", "ReleaseNotes": "Support for dual Ubuntu/Debian install" }
         ]
       },
 
