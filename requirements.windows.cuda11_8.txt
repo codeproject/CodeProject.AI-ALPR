@@ -2,10 +2,8 @@
 
 numpy<2                         # Installing NumPy, a package for scientific computing
 
-# PaddlePaddle from PyPi is for CUDA 11.8 only. Need to use paddlepaddle.org for other CUDA versions
+# PaddlePaddle 2.6.2 from PyPi is for CUDA 11.8 only.
 paddlepaddle-gpu==2.6.2         # Installing PaddlePaddle, Parallel Distributed Deep Learning
-
-#paddleocr==2.6.1.3             # Installing PaddleOCR, the OCR toolkit based on PaddlePaddle
 paddleocr==2.7.0.3              # Installing PaddleOCR, the OCR toolkit based on PaddlePaddle
 
 imutils                         # Installing imutils, the image utilities library
