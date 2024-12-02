@@ -23,6 +23,12 @@ fi
 if [ "${systemName}" = "Raspberry Pi" ] || [ "${systemName}" = "Orange Pi" ] || \
    [ "${systemName}" = "Radxa ROCK"   ]; then
 
+    oneStepPIP=true
+
+    if [ "$oneStepPIP" = false ]; then
+        installPythonPackagesByName "numpy==1.23.3 protobuf<=3.20"
+    fi
+
     # PaddleOCR 2.7.0.3 requires OpenCV 4.6.0.66
     installPythonPackagesByName "opencv-python==4.6.0.66" "OpenCV, the Computer Vision library for Python"
 
@@ -37,7 +43,9 @@ if [ "${systemName}" = "Raspberry Pi" ] || [ "${systemName}" = "Orange Pi" ] || 
     installAptPackages "libatlas-base-dev libopenblas-dev libblas-dev"
     installAptPackages "liblapack-dev patchelf gfortran"
 
-    installPythonPackagesByName "Cython protobuf<=3.20 six requests wheel pyyaml"
+    if [ "$oneStepPIP" = false ]; then
+        installPythonPackagesByName "Cython six requests wheel pyyaml"
+    fi
 
     "$venvPythonCmdPath" -m pip show paddlepaddle >/dev/null 2>/dev/null
     if [ $? -eq 0 ]; then

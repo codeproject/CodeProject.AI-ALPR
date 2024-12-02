@@ -1,6 +1,6 @@
 #! Python3.9
 
-numpy==1.23.3                   # Installing NumPy, a package for scientific computing
+# numpy==1.23.3                   # Installing NumPy, a package for scientific computing
 
 #paddlepaddle==2.4.2            # Will install from QEngineering
 #paddleocr==2.6.0.1             # Installing PaddleOCR, the OCR toolkit based on PaddlePaddle
