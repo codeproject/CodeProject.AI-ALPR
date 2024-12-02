@@ -23,7 +23,7 @@ fi
 if [ "${systemName}" = "Raspberry Pi" ] || [ "${systemName}" = "Orange Pi" ] || \
    [ "${systemName}" = "Radxa ROCK"   ]; then
 
-    oneStepPIP=true
+    oneStepPIP=false
 
     if [ "$oneStepPIP" = false ]; then
         installPythonPackagesByName "numpy==1.23.3 protobuf<=3.20"
