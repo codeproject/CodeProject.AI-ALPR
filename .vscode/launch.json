@@ -27,8 +27,8 @@
                 "python": "${workspaceFolder}/bin/windows/python39/venv/Scripts/python.exe"
             },
             "linux": {
-                // "python": "${workspaceFolder}/bin/ubuntu/python38/venv/bin/python",
-                "python": "${workspaceFolder}/bin/debian/python38/venv/bin/python",
+                "python": "${workspaceFolder}/bin/ubuntu/python38/venv/bin/python",
+                // "python": "${workspaceFolder}/bin/debian/python38/venv/bin/python",
             },
             "osx": {
                 "python": "${workspaceFolder}/bin/macos/python38/venv/bin/python",
@@ -60,8 +60,8 @@
                 "python": "${workspaceFolder}/bin/windows/python39/venv/Scripts/python.exe"
             },
             "linux": {
-                // "python": "${workspaceFolder}/bin/ubuntu/python38/venv/bin/python",
-                "python": "${workspaceFolder}/bin/debian/python38/venv/bin/python",
+                "python": "${workspaceFolder}/bin/ubuntu/python38/venv/bin/python",
+                // "python": "${workspaceFolder}/bin/debian/python38/venv/bin/python",
             },
             "osx": {
                 "python": "${workspaceFolder}/bin/macos/python38/venv/bin/python",
