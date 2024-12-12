@@ -7,6 +7,7 @@ paddlepaddle==2.6.0             # Installing PaddelPaddle, the Deep Learning pla
 ## We also need to specify the exact version for paddleocr in Linux because 
 ## v2.6.0.2 and 2.6.0.3 fail to build (lanms-neo fails to build, which is required)
 #paddleocr==2.6.0.1             # Installing PaddleOCR, the OCR toolkit based on PaddlePaddle
+-i https://pypi.tuna.tsinghua.edu.cn/simple/
 paddleocr==2.7.0.3              # Installing PaddleOCR, the OCR toolkit based on PaddlePaddle
 
 imutils                         # Installing imutils, the image utilities library
