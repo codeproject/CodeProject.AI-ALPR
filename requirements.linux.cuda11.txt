@@ -1,6 +1,6 @@
 #! Python3.7
 
-numpy<2.0                       # Installing NumPy, a package for scientific computing
+numpy==1.23.3                   # Installing NumPy, a package for scientific computing
 
 # See https://www.paddlepaddle.org.cn/documentation/docs/en/install/pip/linux-pip_en.html#gpu
 

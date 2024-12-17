@@ -1,6 +1,6 @@
 #! Python3.7
 
-numpy<2.0                       # Installing NumPy, a package for scientific computing
+numpy==1.23.3                   # Installing NumPy, a package for scientific computing
 
 # PaddlePaddle from PyPi is for CUDA 10.2 only. Need to use Baidu index for other CUDA versions
 -i https://mirror.baidu.com/pypi/simple
