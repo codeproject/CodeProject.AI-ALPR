@@ -7,6 +7,12 @@ from typing import Tuple
 import utils.tools as tool
 from utils.cartesian import *
 
+# import sys
+# sys.path.append("../../CodeProject.AI-Server/src/SDK/Python/src/codeproject_ai_sdk/")
+# from common import JSON
+# from module_runner import ModuleRunner
+# from module_logging import LogVerbosity
+
 from codeproject_ai_sdk import LogVerbosity, ModuleRunner, JSON
 
 from PIL import Image

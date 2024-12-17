@@ -4,6 +4,12 @@ import time
 # Import CodeProject.AI SDK
 from codeproject_ai_sdk import RequestData, ModuleRunner, JSON
 
+# import sys
+# sys.path.append("../../CodeProject.AI-Server/src/SDK/Python/src/codeproject_ai_sdk/")
+# from common import JSON
+# from request_data import RequestData
+# from module_runner import ModuleRunner
+
 # import modules we've installed as for this module to work
 from PIL import Image
 
