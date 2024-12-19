@@ -2,6 +2,9 @@
 
 This is an Automatic License Plate Recognition (ALPR) module for [CodeProject.AI Server](https://www.codeproject.com/Articles/5322557/CodeProject-AI-Server-AI-the-easy-way). The actual module itself is downloadable via the CodeProject.AI Server's dashboard.
 
+> [!IMPORTANT]  
+> GPU support on Linux is **not currently supported**.
+
 ## To develop and debug this code
 
 1. Clone the main [server repo](https://github.com/codeproject/CodeProject.AI-Server) into a directory such as `CodeProject/CodeProject.AI-Server`
