@@ -11,6 +11,9 @@ assignees: ''
 
 [ If possible, cut and paste the info from the System Info tab here ]
 
+***If you use Docker***
+
+Please show your docker startup command (eg something like the command line [described here](https://codeproject.github.io/codeproject.ai/install/running_in_docker.html#advanced-docker-launch-settings-saved-outside-of-the-container)
 
 **Describe the bug**
 A clear and concise description of what the bug is.
@@ -28,10 +31,6 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
 
 **Additional context**
 Add any other context about the problem here.
