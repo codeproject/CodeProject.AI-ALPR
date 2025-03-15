@@ -33,13 +33,14 @@
         
         "PLATE_CONFIDENCE": 0.7,        // Confidence required in detecting a plate in the first place
         "PLATE_ROTATE_DEG": 0,          // If non-zero, rotate plate before OCR (+ve = counterclockwise)
-        "AUTO_PLATE_ROTATE": true,
-        "PLATE_RESCALE_FACTOR": 2,
+        "AUTO_PLATE_ROTATE": false,
+        "PLATE_RESCALE_FACTOR": 1.0,
         "OCR_OPTIMIZATION": true,
         "OCR_OPTIMAL_CHARACTER_HEIGHT": 60,
         "OCR_OPTIMAL_CHARACTER_WIDTH": 30,
-        "REMOVE_SPACES": false,
+        "REMOVE_SPACES": true,        // Remove spaces between characters in OCR result.  False = keep spaces.  True = remove spaces.  Default = false,
         "SAVE_CROPPED_PLATE": false,
+        "OCR_TRAINING_DATASET": false,
         "ROOT_PATH": "%ROOT_PATH%",
         "CROPPED_PLATE_DIR": "%ROOT_PATH%/Server/wwwroot"
       },
@@ -113,8 +114,8 @@
         {
           "Label": "Auto Plate Rotation",
           "Options": [
-            { "Label": "Enable (Default)",  "Setting": "AUTO_PLATE_ROTATE", "Value": "true"  },
-            { "Label": "Disable",           "Setting": "AUTO_PLATE_ROTATE", "Value": "false" }
+            { "Label": "Enable",            "Setting": "AUTO_PLATE_ROTATE", "Value": "true"  },
+            { "Label": "Disable (Default)", "Setting": "AUTO_PLATE_ROTATE", "Value": "false" }
           ]
         },
         {
@@ -134,8 +135,15 @@
         {
           "Label": "Remove Spaces",
           "Options": [
-              { "Label": "Enable",            "Setting": "REMOVE_SPACES", "Value": "true"   },
-              { "Label": "Disable (Default)", "Setting": "REMOVE_SPACES", "Value": "false"  }
+              { "Label": "Enable (Default)", "Setting": "REMOVE_SPACES", "Value": "true"   },
+              { "Label": "Disable",          "Setting": "REMOVE_SPACES", "Value": "false"  }
+        ]
+        },
+        {
+          "Label": "Build OCR Training Dataset",
+          "Options": [
+              { "Label": "Enable",            "Setting": "OCR_TRAINING_DATASET", "Value": "true"   },
+              { "Label": "Disable (Default)", "Setting": "OCR_TRAINING_DATASET", "Value": "false"  }
           ]
 
         }]
