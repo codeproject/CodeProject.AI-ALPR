@@ -87,7 +87,8 @@
           { "ModuleVersion": "3.3.1", "ServerVersionRange": [ "2.8.0", "2.9.3"  ], "ReleaseDate": "2024-11-23", "ReleaseNotes": "Improved cuDNN check" },
           { "ModuleVersion": "3.3.2", "ServerVersionRange": [ "2.9.4", "" ], "ReleaseDate": "2024-11-26", "ReleaseNotes": "Support for dual Ubuntu/Debian install" },
           { "ModuleVersion": "3.3.3", "ServerVersionRange": [ "2.9.4", "" ], "ReleaseDate": "2024-11-29", "ReleaseNotes": "Corrections for CUDA 11.8" },
-          { "ModuleVersion": "3.3.4", "ServerVersionRange": [ "2.9.4", "" ], "ReleaseDate": "2024-12-11", "ReleaseNotes": "Corrections for Linux arm64" }
+          { "ModuleVersion": "3.3.4", "ServerVersionRange": [ "2.9.4", "" ], "ReleaseDate": "2024-12-11", "ReleaseNotes": "Corrections for Linux arm64" },
+          { "ModuleVersion": "3.4.0", "ServerVersionRange": [ "2.9.4", "" ], "ReleaseDate": "2025-03-16", "ReleaseNotes": "Added PaddleOCR and License plate model training annotations" }
         ]
       },
 
