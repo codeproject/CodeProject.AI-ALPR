@@ -15,10 +15,10 @@ class Options:
         self.plate_rotate_deg      = int(ModuleOptions.getEnvVariable("PLATE_ROTATE_DEG", 0))
 
         # positive integer for counterclockwise rotation and negative integer for clockwise rotation
-        self.auto_plate_rotate     = str(ModuleOptions.getEnvVariable("AUTO_PLATE_ROTATE", "True")).lower() == "true"
+        self.auto_plate_rotate     = str(ModuleOptions.getEnvVariable("AUTO_PLATE_ROTATE", "False")).lower() == "true"
 
         # increase size of plate 2X before attempting OCR
-        self.OCR_rescale_factor    = float(ModuleOptions.getEnvVariable("PLATE_RESCALE_FACTOR", 2.0))
+        self.OCR_rescale_factor    = float(ModuleOptions.getEnvVariable("PLATE_RESCALE_FACTOR", 1.0))
 
         # For checking if this system can support Paddle GPU
         self.min_compute_capability = float(ModuleOptions.getEnvVariable("MIN_COMPUTE_CAPABILITY", 6))
@@ -28,10 +28,11 @@ class Options:
         self.OCR_optimization             = str(ModuleOptions.getEnvVariable("OCR_OPTIMIZATION", "True")).lower() == "true"
         self.OCR_optimal_character_height = int(ModuleOptions.getEnvVariable("OCR_OPTIMAL_CHARACTER_HEIGHT", 60))
         self.OCR_optimal_character_width  = int(ModuleOptions.getEnvVariable("OCR_OPTIMAL_CHARACTER_WIDTH", 36))
-        self.remove_spaces                = str(ModuleOptions.getEnvVariable("REMOVE_SPACES", "False")).lower() == "true"
+        self.remove_spaces                = str(ModuleOptions.getEnvVariable("REMOVE_SPACES", "True")).lower() == "true"
         self.save_cropped_plate           = str(ModuleOptions.getEnvVariable("SAVE_CROPPED_PLATE", "False")).lower() == "true"
+        self.OCR_training_dataset         = str(ModuleOptions.getEnvVariable("OCR_TRAINING_DATASET", "False")).lower() == "true"
         self.root_path                    = os.path.normpath(ModuleOptions.getEnvVariable("ROOT_PATH"))
-        self.cropped_plate_dir            = os.path.normpath(ModuleOptions.getEnvVariable("CROPPED_PLATE_DIR", f"{self.root_path}/custom-models"))
+        self.cropped_plate_dir            = os.path.normpath(ModuleOptions.getEnvVariable("CROPPED_PLATE_DIR", f"{self.root_path}/Server/wwwroot"))
         
         # PaddleOCR settings
         self.use_gpu               = ModuleOptions.enable_GPU  # We'll disable this if we can't find GPU libraries

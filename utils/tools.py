@@ -1,9 +1,9 @@
-
 import cv2
 import math
 import re
 import numpy as np
 from PIL import Image
+from typing import Tuple
 
 from utils.cartesian import *
 
@@ -144,60 +144,7 @@ def calculate_angle(x1, y1, x2, y2) -> float:
 
     return angle_degrees
 
-
 """
-def compute_skew(src_img: ImageType) -> float:
-
-    # Computes the degrees by which an image containing a licence plate (or anything
-    # vaguely rectangular that's longer than it is high) is skewed
-    
-    try:
-        dimensions: Size = Size(src_img.shape[1], src_img.shape[0])
-        dimensions.integerize()
-
-        # Exaggerate the width to make line detection more prominent
-        dimensions.width  *= 8
-        dimensions.height *= 2
-
-        gray_img   = cv2.resize(src_img, dimensions.as_tuple(), interpolation = cv2.INTER_CUBIC)
-        # gray_img = cv2.cvtColor(src_img,cv2.COLOR_BGR2GRAY)
-        median_img = cv2.medianBlur(gray_img, 5)
-        edges      = cv2.Canny(median_img,  threshold1 = 60,  threshold2 = 90, apertureSize = 3, L2gradient = True)
-
-        lines = cv2.HoughLinesP(edges, rho = 1, theta = np.pi/180, threshold = int(dimensions.height * 0.50),
-                                minLineLength = dimensions.height * 0.75, maxLineGap = dimensions.width * 0.04)
-
-        for line in lines:
-            x1,y1,x2,y2 = line[0]
-            cv2.line(median_img, (x1,y1), (x2,y2), (255,255,255), 2)
-
-        angle: float = 0.0
-        count: int   = 0
-        index: int   = 0
-        
-        for index in range(len(lines)):
-            line = lines[index]
-            for x1, y1, x2, y2 in line:
-                line_angle = np.arctan2(y2 - y1, x2 - x1) * 4
-
-            if math.fabs(line_angle) <= 0.524 and math.fabs(line_angle): # excluding extreme rotations
-                angle += line_angle
-                count += 1
-
-    except Exception as ex:
-        return 0.0
-
-    # return the average line angle in degrees if lines were found
-    if count:
-        return (angle / count)*180/math.pi    
-
-    return 0.0
-
-
-# def deskew(src_img: ImageType) -> ImageType:
-#    return rotate_image(src_img, compute_skew(src_img))
-
-
 def gamma_correction(image: ImageType) -> ImageType:
     # HSV (or other color spaces)
 
@@ -251,6 +198,9 @@ def merge_text_detections(bounding_boxes, remove_spaces) -> Tuple[str, float, in
     large_boxes_count  = 0
     avg_char_width     = 0
     avg_char_height    = 0
+    merged_bounding_boxes = []
+    bounding_box =[]
+
 
     # Find the tallest bounding box
     for box, (text, confidence) in bounding_boxes:
@@ -279,13 +229,17 @@ def merge_text_detections(bounding_boxes, remove_spaces) -> Tuple[str, float, in
     
     # Merge all text from large boxes
     merged_text = ''
-    for box, (text, _) in bounding_boxes:
+    for box, (text, confidence) in bounding_boxes:
         if box in large_boxes:
             large_boxes_count += 1
+            text_ws  = pattern.sub(' ', text)
             if count > 1 and large_boxes_count < count:
                 text = text + ' '
             merged_text += text
+            bounding_box = [box, (text_ws, confidence)]
+            merged_bounding_boxes.append(bounding_box)  
 
+    # Remove spaces if required
     if remove_spaces:
         merged_text  = pattern.sub('', merged_text)
     else:
@@ -293,6 +247,35 @@ def merge_text_detections(bounding_boxes, remove_spaces) -> Tuple[str, float, in
 
     if debug_log == True:
         with open("logbox.txt", "a") as text_file:
-            text_file.write(f"Avg char (w,h): {avg_char_height} x {avg_char_width} - {tallest_box_text}\n\n")
+            text_file.write(f"{merged_bounding_boxes}\n")
 
-    return merged_text, average_confidence, avg_char_height, avg_char_width
+    return merged_text, average_confidence, avg_char_height, avg_char_width, merged_bounding_boxes
+
+
+def euclidean_distance(p1, p2):
+    return np.linalg.norm(p1 - p2)
+
+def order_points(pts):
+    xSorted = pts[np.argsort(pts[:, 0])]
+    leftMost, rightMost = xSorted[:2], xSorted[2:]
+    leftMost = leftMost[np.argsort(leftMost[:, 1])]
+    tl, bl = leftMost
+    distances = np.linalg.norm(rightMost - tl, axis=1)
+    br, tr = rightMost[np.argsort(distances)[::-1]]
+    return np.array([tl, tr, br, bl], dtype="float32")
+
+def four_point_transform(image, pts):
+    rect = order_points(pts)
+    (tl, tr, br, bl) = rect
+    
+    maxWidth = int(max(np.linalg.norm(br - bl), np.linalg.norm(tr - tl)))
+    maxHeight = int(max(np.linalg.norm(tr - br), np.linalg.norm(tl - bl)))
+    
+    dst = np.array([
+        [0, 0],
+        [maxWidth - 1, 0],
+        [maxWidth - 1, maxHeight - 1],
+        [0, maxHeight - 1]], dtype="float32")
+    
+    M = cv2.getPerspectiveTransform(rect, dst)
+    return cv2.warpPerspective(image, M, (maxWidth, maxHeight))
