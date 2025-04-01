@@ -13,8 +13,9 @@
 # Visual Studio cache/options directory
 .vs/
 
-# Misc
+# macOS Misc
 .DS_Store
+._*
 
 # Python cache
 __pycache__/
