@@ -3,7 +3,7 @@
 
     "ALPR": {
       "Name": "License Plate Reader",
-      "Version": "3.3.4",
+      "Version": "3.4.0",
 
       "PublishingInfo" : {
         "Description": "Detects and readers single-line and multi-line license plates using YOLO object detection and the PaddleOCR toolkit",
