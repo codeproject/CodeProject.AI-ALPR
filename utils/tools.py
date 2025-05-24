@@ -189,7 +189,8 @@ def equalize(image: ImageType) -> ImageType:
 
 def merge_text_detections(bounding_boxes, remove_spaces) -> Tuple[str, float, int, int]:
     
-    pattern            = re.compile('[^a-zA-Z0-9]+')
+    # https://github.com/codeproject/CodeProject.AI-Server/discussions/313#discussioncomment-12457279
+    pattern            = re.compile('[^a-zA-Z0-9\uAC00-\uD7A3\u1100-\u11FF\uA960-\uA97F\uD7B0-\uD7FF]+') # re.compile('[^a-zA-Z0-9]+')
     tallest_box        = None
     tallest_box_height = 0
     large_boxes        = []
